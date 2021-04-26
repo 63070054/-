@@ -189,6 +189,10 @@
                                     class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
                                     รายการคำสั่งซื้อ
                                 </a>
+                                <a href="check_order_list.html" role="menuitem"
+                                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
+                                    ตรวจสอบคำสั่งซื้อ
+                                </a>
                                 <a href="bank.html" role="menuitem"
                                     class="block p-2 text-sm text-gray-700 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
                                     จัดการธนาคาร
@@ -230,10 +234,6 @@
                                 <a href="delivery_detail.html" role="menuitem"
                                     class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
                                     รายการที่ต้องจัดส่ง
-                                </a>
-                                <a href="ems.html" role="menuitem"
-                                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
-                                    แจ้งเลข EMS
                                 </a>
                             </div>
                         </div>
@@ -467,6 +467,10 @@
                                         class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700">
                                         รายการคำสั่งซื้อ
                                     </a>
+                                    <a href="check_order_list.html" role="menuitem"
+                                        class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
+                                        ตรวจสอบคำสั่งซื้อ
+                                    </a>
                                     <a href="bank.html" role="menuitem"
                                         class="block p-2 text-sm text-gray-700 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
                                         จัดการธนาคาร
@@ -511,10 +515,6 @@
                                     class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
                                         รายการที่ต้องจัดส่ง
                                     </a>
-                                    <a href="ems.html" role="menuitem"
-                                        class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
-                                        แจ้งเลข EMS
-                                    </a>
                                 </div>
                             </div>
 
@@ -528,7 +528,7 @@
                     <!-- Content header -->
                     <div
                         class="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
-                        <h1 class="text-2xl font-semibold">เพิ่มสินค้า</h1>
+                        <h1 class="text-2xl font-semibold">จัดการธนาคาร</h1>
                     </div>
 
                     <!-- Content -->
@@ -536,12 +536,12 @@
                     <div class="container w-full px-2 mx-auto md:w-4/5 xl:w-4/5">
 
                         <!--Title-->
-                        <!-- <div class="flex items-center justify-center lg:block">
-                            <button
-                                class="flex items-center justify-center px-2 py-1 mt-5 mb-5 text-base font-bold text-center text-white break-normal bg-indigo-500 rounded-md modal-open hover:bg-indigo-600 md:text-base" data-toggle="modal" data-target="add-product">
-                                เพิ่มสินค้า
+                        <div class="flex items-center justify-center lg:block">
+                            <button onclick="addBank()"
+                                class="flex items-center justify-center w-full px-2 py-3 mt-5 mb-5 text-base font-bold text-center text-white break-normal bg-indigo-500 rounded-md modal-open hover:bg-indigo-600 md:text-base">
+                                เพิ่มธนาคาร
                             </button>
-                        </div> -->
+                        </div>
 
 
 
@@ -553,18 +553,16 @@
                                 style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
                                 <thead>
                                     <tr>
-                                        <th data-priority="1">ID</th>
-                                        <th data-priority="2">Logo</th>
-                                        <th data-priority="3">ประเภท</th>
-                                        <th data-priority="4">ธนาคาร</th>
-                                        <th data-priority="5">เลขขัญชี</th>
-                                        <th data-priority="6">เจ้าของ</th>
-                                        <th data-priority="7">จัดการ</th>
+                                        <th data-priority="1">Logo</th>
+                                        <th data-priority="2">ประเภท</th>
+                                        <th data-priority="3">ธนาคาร</th>
+                                        <th data-priority="4">เลขขัญชี</th>
+                                        <th data-priority="5">เจ้าของ</th>
+                                        <th data-priority="6">จัดการ</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="tableTest">
                                     <tr>
-                                        <td class="text-center">1</td>
                                         <td class="w-10 text-center">
                                             <img class="book" src="build/images/book.jpg" alt="">
                                             <label for="file-upload" class="relative font-medium text-indigo-600  cursor-pointer hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
@@ -1096,7 +1094,8 @@
                 }
             }
             const editAmountProduct = (button) => {
-                // px-2 py-1 text-yellow-400 transition-all rounded-md duration-400 hover:text-white hover:bg-yellow-500
+                // px-2 py-1 text-yellow-400 transition-all rounded-md duration-400 hover:text-white hover:bg-yellow-500  
+                let row = document.querySelectorAll("tr");
                 if(button.getAttribute("check") == "1"){
                     button.classList.remove("text-yellow-400");
                     button.classList.remove("hover:bg-yellow-500");
@@ -1104,7 +1103,7 @@
                     button.classList.add("hover:bg-green-500");
                     button.innerText = "ยืนยัน";
                     button.setAttribute("check", "0");
-                    $("#typeBank").prop("readonly", false);
+                    $("#typebank").prop("readonly", false);
                     $("#bank").prop("readonly", false);
                     $("#account").prop("readonly", false);
                     $("#owner").prop("readonly", false);
@@ -1116,12 +1115,42 @@
                     button.classList.add("hover:bg-yellow-500");
                     button.innerText = "แก้ไข";
                     button.setAttribute("check", "1");
-                    $("#typeBank").prop("readonly", true);
+                    `typebank${row}`.innerText = "wave";
+                    $("#typebank").prop("readonly", true);
                     $("#bank").prop("readonly", true);
                     $("#account").prop("readonly", true);
                     $("#owner").prop("readonly", true);
                     text_file.innerText = "";
                 }
+            }
+            const addBank = () => {
+                let newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                                        <td class="w-10 text-center">
+                                            <img class="book" src="" alt="">
+                                            <label for="file-upload" class="relative font-medium text-indigo-600  cursor-pointer hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                <span id="text_file"></span>
+                                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                            </label>
+                                        </td>
+                                        <td class="text-center">
+                                            <input  value="" class="w-20 text-center bg-transparent">
+                                        </td>
+                                        <td class="text-center">
+                                            <input  value="" class="w-10 text-center bg-transparent">
+                                        </td>
+                                        <td class="text-center">
+                                            <input  type="text" value="" class="text-center bg-transparent" style="width: 70%;">
+                                        </td>
+                                        <td class="text-center">
+                                            <input  value="" class="w-30 text-center bg-transparent">
+                                        </td>
+                                        <td class="text-center p-auto">
+                                            <div><button
+                                                class="px-2 py-1 text-yellow-400 transition-all rounded-md duration-400 hover:text-white hover:bg-yellow-500" onclick="editAmountProduct(this)">แก้ไข</button></div>
+                                        </td>
+                                    `;
+                tableTest.appendChild(newRow);
             }
         </script>
 </body>
