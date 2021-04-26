@@ -548,24 +548,21 @@
                                 <thead>
                                     <tr>
                                         <th data-priority="1">ID</th>
-                                        <th data-priority="2">รายละเอียดคำสั่งซื้อ</th>
-                                        <th data-priority="3">สถานะคำสั่งซื้อ</th>
+                                        <th data-priority="2">ชื่อลูกค้า</th>
+                                        <th data-priority="3">รายละเอียดคำสั่งซื้อ</th>
                                         <th data-priority="4">จัดการ</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="text-center">1</td>
+                                        <td class="text-center">ประภากร</td>
                                         <td class="text-center">
-                                            <a href="order_detail_sales.html" class="flex items-center justify-center text-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="absolute">
+                                            <div class="flex items-center justify-center text-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="absolute modal-open cursor-pointer" data-toggle="modal" data-target="order_info"> 
                                                     <path d="M9 19h-4v-2h4v2zm2.946-4.036l3.107 3.105-4.112.931 1.005-4.036zm12.054-5.839l-7.898 7.996-3.202-3.202 7.898-7.995 3.202 3.201zm-6 8.92v3.955h-16v-18h4l2.102 2h3.898l2-2h4v1.911l2-2.024v-1.887h-3c-1.229 0-2.18-1.084-3-2h-8c-.82.916-1.771 2-3 2h-3v22h20v-7.98l-2 2.025zm-8-16.045c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"/>
                                                 </svg>
-                                            </a>
-                                        </td>
-                                        <td class="text-center">
-                                            <div><button
-                                                class="px-2 py-1 transition-all rounded-md text-red-500">สั่งซื้อสินค้า</button></div>
+                                            </div>
                                         </td>
                                         <td class="text-center">
                                             <div><button
@@ -574,16 +571,13 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center">2</td>
+                                        <td class="text-center">ประภากร</td>
                                         <td class="text-center">
-                                            <a href="order_detail_sales.html" class="flex items-center justify-center text-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="absolute">
+                                            <div class="flex items-center justify-center text-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="absolute modal-open cursor-pointer" data-toggle="modal" data-target="order_info"> 
                                                     <path d="M9 19h-4v-2h4v2zm2.946-4.036l3.107 3.105-4.112.931 1.005-4.036zm12.054-5.839l-7.898 7.996-3.202-3.202 7.898-7.995 3.202 3.201zm-6 8.92v3.955h-16v-18h4l2.102 2h3.898l2-2h4v1.911l2-2.024v-1.887h-3c-1.229 0-2.18-1.084-3-2h-8c-.82.916-1.771 2-3 2h-3v22h20v-7.98l-2 2.025zm-8-16.045c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"/>
                                                 </svg>
-                                            </a>
-                                        </td>
-                                        <td class="text-center">
-                                            <div><button
-                                                class="px-2 py-1 transition-all rounded-md text-yellow-500 " id="waiting">แจ้งชำระเงิน</button></div>
+                                            </div>
                                         </td>
                                         <td class="text-center">
                                             <div><button data-toggle="modal" data-target="edit-type" id="btn_check"
@@ -592,16 +586,13 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center">3</td>
+                                        <td class="text-center">ประภากร</td>
                                         <td class="text-center">
-                                            <a href="order_detail_sales.html" class="flex items-center justify-center text-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="absolute">
+                                            <div class="flex items-center justify-center text-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="absolute modal-open cursor-pointer" data-toggle="modal" data-target="order_info"> 
                                                     <path d="M9 19h-4v-2h4v2zm2.946-4.036l3.107 3.105-4.112.931 1.005-4.036zm12.054-5.839l-7.898 7.996-3.202-3.202 7.898-7.995 3.202 3.201zm-6 8.92v3.955h-16v-18h4l2.102 2h3.898l2-2h4v1.911l2-2.024v-1.887h-3c-1.229 0-2.18-1.084-3-2h-8c-.82.916-1.771 2-3 2h-3v22h20v-7.98l-2 2.025zm-8-16.045c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"/>
                                                 </svg>
-                                            </a>
-                                        </td>
-                                        <td class="text-center">
-                                            <div><button
-                                                class="px-2 py-1 transition-all rounded-md text-green-500">จัดส่งสินค้า</button></div>
+                                            </div>
                                         </td>
                                         <td class="text-center">
                                             <div><button
@@ -632,7 +623,178 @@
                     <!--/container-->
                     
                     <!--Modal-->
-                    
+                    <div class="fixed top-0 left-0 flex items-center justify-center w-full h-full opacity-0 pointer-events-none modal"
+                        id="order_info">
+                        <div class="absolute w-full h-full bg-gray-900 opacity-50 modal-overlay"></div>
+
+                        <div
+                        class="absolute top-0 right-0 z-50 flex flex-col items-center mt-4 mr-4 text-sm text-white cursor-pointer modal-close">
+                        <svg class="text-white fill-current" xmlns="http://www.w3.org/2000/svg" width="18"
+                            height="18" viewBox="0 0 18 18">
+                            <path
+                                d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                            </path>
+                        </svg>
+                        <span class="text-sm">(Esc)</span>
+                        </div>
+                        <div
+                            class="z-50 mx-auto overflow-x-hidden bg-white rounded shadow-lg modal-container w-9/12 relative h-5/6">
+
+                            <!-- Add margin if you want to see some of the overlay behind the modal-->
+                            <div class="modal-content text-left relative w-full h-full">
+                                <!--Title-->
+                                <div class="flex justify-center h-1/6">
+                                    <button class="py-2 font-semibold tracking-wider text-white bg-indigo-500 hover:bg-indigo-600 w-1/2" onclick="swap(this)" swap="detail">รายละเอียดการสั่งซื้อ</button>
+                                    <button class=" py-2 font-semibold tracking-wider text-white bg-indigo-500 hover:bg-indigo-600 w-1/2" onclick="swap(this)" swap="info">ข้อมูลการสั่งซื้อ</button>
+                                </div>
+                                <div class="w-full h-5/6">
+                                    <div class="w-full h-auto bg-white absolute block" id="win_detail">
+                                        <table id="example" class="stripe hover w-full">
+                                            <thead>
+                                                <tr>
+                                                    <th data-priority="1" class="text-center">ลำดับ</th>
+                                                    <th data-priority="2" class="text-center">รูปสินค้า</th>
+                                                    <th data-priority="3" class="text-center">ชื่อหนังสือ</th>
+                                                    <th data-priority="4" class="text-center">รายละเอียด</th>
+                                                    <th data-priority="5" class="text-center">ราคาเล่มละ</th>
+                                                    <th data-priority="6" class="text-center">จำนวน</th>
+                                                    <th data-priority="7" class="text-center">รวม</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-center w-10"><img class="book" src="build/images/book.jpg" alt=""></td>
+                                                    <td class="text-center">คัมภีร์สุดยอดนักลงทุน</td>
+                                                    <td class="text-center">
+                                                        <a href="#" class="flex items-center justify-center text-center">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="absolute">
+                                                                <path d="M9 19h-4v-2h4v2zm2.946-4.036l3.107 3.105-4.112.931 1.005-4.036zm12.054-5.839l-7.898 7.996-3.202-3.202 7.898-7.995 3.202 3.201zm-6 8.92v3.955h-16v-18h4l2.102 2h3.898l2-2h4v1.911l2-2.024v-1.887h-3c-1.229 0-2.18-1.084-3-2h-8c-.82.916-1.771 2-3 2h-3v22h20v-7.98l-2 2.025zm-8-16.045c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"/>
+                                                            </svg>
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-center">250</td>
+                                                    <td class="text-center w-10">1</td>
+                                                    <td class="text-center">250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">2</td>
+                                                    <td class="text-center w-10"><img class="book" src="build/images/book.jpg" alt=""></td>
+                                                    <td class="text-center">คัมภีร์สุดยอดนักลงทุน</td>
+                                                    <td class="text-center">
+                                                        <a href="#" class="flex items-center justify-center text-center">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="absolute">
+                                                                <path d="M9 19h-4v-2h4v2zm2.946-4.036l3.107 3.105-4.112.931 1.005-4.036zm12.054-5.839l-7.898 7.996-3.202-3.202 7.898-7.995 3.202 3.201zm-6 8.92v3.955h-16v-18h4l2.102 2h3.898l2-2h4v1.911l2-2.024v-1.887h-3c-1.229 0-2.18-1.084-3-2h-8c-.82.916-1.771 2-3 2h-3v22h20v-7.98l-2 2.025zm-8-16.045c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"/>
+                                                            </svg>
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-center">250</td>
+                                                    <td class="text-center w-10">2</td>
+                                                    <td class="text-center">500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">3</td>
+                                                    <td class="text-center w-10"><img class="book" src="build/images/book.jpg" alt=""></td>
+                                                    <td class="text-center">คัมภีร์สุดยอดนักลงทุน</td>
+                                                    <td class="text-center">
+                                                        <a href="#" class="flex items-center justify-center text-center">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="absolute">
+                                                                <path d="M9 19h-4v-2h4v2zm2.946-4.036l3.107 3.105-4.112.931 1.005-4.036zm12.054-5.839l-7.898 7.996-3.202-3.202 7.898-7.995 3.202 3.201zm-6 8.92v3.955h-16v-18h4l2.102 2h3.898l2-2h4v1.911l2-2.024v-1.887h-3c-1.229 0-2.18-1.084-3-2h-8c-.82.916-1.771 2-3 2h-3v22h20v-7.98l-2 2.025zm-8-16.045c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"/>
+                                                            </svg>
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-center">250</td>
+                                                    <td class="text-center w-10">3</td>
+                                                    <td class="text-center">750</td>
+                                                </tr>
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                    <div class="w-full h-auto bg-white absolute hidden" id="win_info">
+                                        <div class="px-6 py-4 text-left modal-content">
+                                            <!--Title-->
+                                             <p class="text-2xl font-bold">ข้อมูลการสั่งซื้อ</p>
+                                             <div class="mb-4">
+                                                <div class="flex flex-row justify-center space-x-2">
+                                                    <div class="flex flex-col w-1/2">
+                                                        <label class="text-lg text-gray-600">ชื่อ <span
+                                                                class="text-red-500">*</span></label></br>
+                                                        <input type="text"
+                                                            class="w-full p-2 border-2 border-gray-300 rounded-md" readonly
+                                                            name="title" id="title" value="ประภากร"></input>
+                                                    </div>
+                                                    <div class="flex flex-col w-1/2">
+            
+                                                        <label class="text-lg text-gray-600">นามสกุล <span
+                                                                class="text-red-500">*</span></label></br>
+                                                        <input type="text"
+                                                            class="w-full p-2 border-2 border-gray-300 rounded-md" readonly
+                                                            name="description" id="description" value=""></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-4">
+                                                    <div class="flex flex-col w-full">
+                                                        <label class="text-lg text-gray-600"> เลขบัตรประจำตัวประชาชน <span
+                                                                class="text-red-500">*</span></label></br>
+                                                        <input type="text"
+                                                            class="w-full p-2 border-2 border-gray-300 rounded-md" readonly
+                                                            name="description" id="description" value="1-1111-11111111"></input>
+                                                    </div>
+                                            </div>
+            
+                                            <div class="mb-4">
+                                                <div class="flex flex-row justify-center space-x-2">
+                                                    <div class="flex flex-col w-1/2">
+                                                        <label class="text-lg text-gray-600">อีเมล <span
+                                                                class="text-red-500">*</span></label></br>
+                                                        <input type="text"
+                                                            class="w-full p-2 border-2 border-gray-300 rounded-md" readonly
+                                                            name="title" id="title" value="ppk@outlook.com"></input>
+                                                    </div>
+                                                    <div class="flex flex-col w-1/2">
+            
+                                                        <label class="text-lg text-gray-600">โทรศัพท์ <span
+                                                                class="text-red-500">*</span></label></br>
+                                                        <input type="text"
+                                                            class="w-full p-2 border-2 border-gray-300 rounded-md" readonly
+                                                            name="description" id="description"value="011-1111111"></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                            <div class="mb-4">
+                                                <div class="flex flex-col w-full">
+            
+                                                    <label class="text-lg text-gray-600"> ที่อยู่ <span
+                                                            class="text-red-500">*</span></label></br>
+                                                    <textarea type="text"
+                                                        class="w-full p-2 border-2 border-gray-300 rounded-md" readonly
+                                                        name="description" id="address">บ้านเลขที่ 9 หมู่ 9</textarea>
+                                                </div>
+                                            </div>
+            
+                                            <div class="mb-4">
+                                                <div class="flex flex-col w-full">
+            
+                                                    <label class="text-lg text-gray-600"> วิธีการชำระเงิน <span
+                                                            class="text-red-500">*</span></label></br>
+                                                    <div class="col-span-6 sm:col-span-3">
+                                                        <input type="text"
+                                                            class="w-full p-2 border-2 border-gray-300 rounded-md" readonly
+                                                            name="description" id="address" value="ธนาคารกสิกรไทย (KBANK)"></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="fixed top-0 left-0 flex items-center justify-center w-full h-full opacity-0 pointer-events-none modal"
                         id="edit-type">
@@ -1110,6 +1272,22 @@
                     waiting.classList.remove("text-yellow-500");
                     waiting.classList.add("text-red-500");
                     waiting.innerText = "ไม่ผ่านการตรวจสอบ";
+                }
+            }
+            const swap = (win) => {
+                // px-2 py-1 text-yellow-400 transition-all rounded-md duration-400 hover:text-white hover:bg-yellow-500
+                if(win.getAttribute("swap") == "detail"){
+                    win_detail.classList.remove("hidden");
+                    win_detail.classList.add("block");
+
+                    win_info.classList.remove("block");
+                    win_info.classList.add("hidden");
+                }else{
+                    win_info.classList.remove("hidden");
+                    win_info.classList.add("block");
+
+                    win_detail.classList.remove("block");
+                    win_detail.classList.add("hidden");
                 }
             }
         </script>
